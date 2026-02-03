@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0 12px 24px 12px;
+  background: #b7dbe7; 
+  font-family: "Times New Roman", Times, serif;
+  color: #000;
+}
+
+/* Top title */
+h1 {
+  text-align: center;
+  font-size: 72px;
+  font-weight: 800;
+  margin: 10px 0 18px 0;
+}
+
+/* Section headers */
+h2 {
+  font-size: 34px;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 20px 0 8px 0;
+}
+
+/* General paragraph sizing */
+p {
+  font-size: 13px;
+  line-height: 1.35;
+  margin: 10px 0;
+}
+
+/* Boxed 2nd paragraph */
+#paragraph2 {
+  background: #ffffff;
+  border: 4px solid #0b7a0b;
+  width: 760px;
+  padding: 18px 28px;
+  margin: 16px 0 16px 14px;
+  line-height: 1.85;
+}
+
+/* Paragraph 4 and 5 */
+p.blue {
+  background: #001a8b;
+  color: #ffffff;
+  border: 4px solid #000066;
+  padding: 14px 12px;
+  margin: 16px 0;
+  line-height: 1.45;
+}
+
+/* Links */
+a {
+  color: #0000ee;          
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #551a8b;
+}
+
+/* Makes only the W3Schools link a different color */
+a[href*="w3schools"] {
+  color: #8b0000;          
+}
+
+a[href*="w3schools"]:visited {
+  color: #8b0000;
+}
+
+/* Ordered list uses two digits */
+ol {
+  list-style-type: decimal-leading-zero;
+  padding-left: 28px;
+  margin: 10px 0 18px 0;
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;     
+  margin-top: 10px;
+  width: 550px;
+  font-size: 13px;
+}
+
+th, td {
+  border: 1px solid #666;
+  padding: 6px 10px;
+  vertical-align: top;
+}
+
+/* header background */
+th {
+  background: #d0d0d0;          
+  font-weight: 800;
+}
+
+/* cell background */
+td {
+  background: #ffffff;           
+}
