@@ -1,0 +1,159 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+:root{
+  --bg: #f4f6f8;
+  --paper: #ffffff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --line: #e5e7eb;
+  --accent: #0f766e; 
+}
+
+body{
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+header, main, footer{
+  width: min(980px, calc(100% - 28px));
+  margin: 0 auto;
+}
+
+header{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px 18px;
+  margin-top: 18px;
+}
+
+header h1{
+  margin: 0;
+  font-size: 1.65rem;
+  letter-spacing: 0.2px;
+}
+
+header p{
+  margin: 8px 0 0 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+a{
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+a:hover, a:focus-visible{
+  text-decoration: underline;
+  outline: none;
+}
+
+main{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+main > section{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 16px;
+  overflow: visible;
+}
+
+h2{
+  margin: 0 0 10px 0;
+  font-size: 1.12rem;
+  letter-spacing: 0.15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h2::before{
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  flex: 0 0 auto;
+}
+
+p{ margin: 8px 0; }
+article p{ color: var(--muted); }
+
+ul{
+  margin: 10px 0 0 0;
+  padding-left: 18px;
+}
+li{
+  margin: 8px 0;
+  color: var(--muted);
+}
+
+strong{ color: var(--text); }
+
+section article p:first-child{
+  color: var(--text);
+  font-weight: 700;
+}
+
+footer{
+  margin: 14px auto 22px auto;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 900px){
+  header{
+    padding: 22px 24px;
+  }
+
+  header h1{
+    font-size: 2rem;
+  }
+
+  main:not(.project-main){
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+
+    grid-template-areas:
+      "objective skills"
+      "education skills"
+      "experience projects"
+      "experience projects";
+    align-items: start;
+  }
+
+  main:not(.project-main) > section:nth-of-type(1){ grid-area: objective; }
+  main:not(.project-main) > section:nth-of-type(2){ grid-area: education; }
+  main:not(.project-main) > section:nth-of-type(3){ grid-area: experience; }
+  main:not(.project-main) > section:nth-of-type(4){ grid-area: projects; }
+  main:not(.project-main) > section:nth-of-type(5){ grid-area: skills; }
+
+  .project-main{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1400px){
+  header, main, footer{
+    width: min(1100px, calc(100% - 40px));
+  }
+}
+
+.project-container img{
+  width: 100%;
+  max-width: 780px;
+  display: block;
+  margin: 14px auto 6px auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
